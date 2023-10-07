@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         experienceHoursElement.textContent = hours;
         experienceMinutesElement.textContent = minutes;
         experienceSecondsElement.textContent = seconds;
+        document.getElementById("year").textContent = years;
     }
 
     // Function to show products when the button is clicked
