@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+/* --------global styles ---------- */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+    color:var(--font-color);
+}
+.black{
+    color:var(--main-color)
+}
+:root{
+    --main-color:#000000;
+    --font-color:#fff;
+}
+
+.container{
+    padding: 1% 5%;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: var(--main-color);
+}
+.main-btn button{
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: #ffff;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-list{
+    flex-basis: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.nav-list li{
+    position: relative;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav-list li:hover{
+    background-color: rgba(0, 0, 0, .65);
+}
+.nav-list li a{
+    color:#fff;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+/* --------global styles ---------- */
+/* -----------home----------- */
+.home{
+    position: relative;
+    text-align: right;
+}
+
+.home .vid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -100;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home .vid video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* -----------home----------- */
+/* ------header------- */
+header {
+    z-index: 100;
+    width: 100%;
+    border-radius: 0;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+header .logo .logo-desc{
+    font-family: 'Raleway', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu {
+    display: none;
+    color: white; /* Adjust the color as needed */
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-right: 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white; /* Adjust the color as needed */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+    .menu {
+        display: block;
+    }
+
+    .nav-list {
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #333; /* Adjust the background color as needed */
+        width: 100%;
+        padding: 15px;
+    }
+
+    .nav-list.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+header .main-btn button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .main-btn img{
+    width: 20px;
+}
+/* -------header------ */
+
+
+/* ------landing------- */
+/* Reset some default margin and padding */
+
+/* Landing section styles */
+.landing {
+    height: calc(100vh - 74px); /* Adjust for the header height */
+}
+
+.landing .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.landing .container .first-row {
+    width: 100%;
+    
+    padding: 0 20px;
+}
+
+.landing .first-row h3 {
+    font-size: 2rem; /* Adjust the font color as needed */
+    margin-bottom: 10px;
+}
+
+.landing .first-row h4 {
+    /* Adjust the font color as needed */
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.landing .first-row h4 span{
+    font-size: 4.5rem;
+    color: gray;
+    -webkit-text-stroke: 2px white;
+}
+.landing .main-btn {
+    margin-top: 30px;
+}
+
+.landing .main-btn button {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .landing .first-row h3 {
+        font-size: 1.5rem;
+    }
+
+    .landing .first-row h4 {
+        font-size: 1.2rem;
+    }
+    .landing .first-row h4 span{
+        font-size:1.9rem;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 2px white;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing .main-btn {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+
+/* ------landing------- */
+
+/* -----------services----------- */
+@media (max-width:767px){
+    .services .flex{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .services .col{
+        flex-basis: 767px;
+    }
+}
+.services .container{
+    padding: 10% 5%;
+}
+
+.head{
+    text-align: center;
+    padding: 10px;
+    
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.services .container{
+    padding-top: 1%;
+}
+.services .container .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:20px;
+}
+.services .container .grid .col{
+    height: 250px;
+    background-position:center;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    text-align: right;
+}
+.services .container .grid .col .descrip{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+    padding: 20px;
+}
+.services .container .grid .col .descrip h3{
+    font-weight: 500;
+    
+}
+.services .container .col-1{
+    background-image: url(../sources/images/ppf-image.webp);
+   
+}
+.services .container .col-2{
+    background-image: url(../sources/images/pdr-image.webp);
+}
+.services .container .col-3{
+    background-image: url(../sources/images/tinting.webp);
+}
+.services .container .col-4{
+    background-image: url(../sources/images/carpainting.webp);
+}
+.services .container .col-5{
+    background-image: url(../sources/images/rim-repair.webp);
+    
+}
+
+.services .container .col-6{
+    background-image: url(../sources/images/ceramic-coating.webp);
+}
+
+.services .container .col-7{
+    background-image: url(../sources/images/interiorestore.webp);
+}
+/* -----------services----------- */
+
+
+@media(max-width:767px){
+    .head{
+        font-size: 2rem;
+    }
+}
+.about .container{
+    padding-block: 1%;
+}
+.about .container .col .badges{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+}
+.about .container .col{
+    flex-basis: 45%;
+}
+.about .container .col .badges .image-holder{
+    
+    flex-basis: 45%;
+}
+.about .container .col .badges img{
+    width: 100%;
+}
+.about .container .col iframe{
+    border-radius: 20px;
+}
+.about .container .col .badges a img{
+    width: 100%;
+}
+/* Your existing CSS styles here */
+
+/* About section description */
+.about .container .col .descrip h1 {
+    display: flex;
+    align-items: center;
+    font-size: 2.3rem;
+}
+
+.about .container .col .descrip span {
+    position: relative;
+    top:5px;
+    margin-inline: 10px;
+}
+
+.about .container .col .descrip .logo {
+    width: 40px;
+    height: auto;
+}
+
+.about .container .col .descrip ul {
+    margin-top: 20px;
+    padding-left: 30px;
+    font-size: 1.1rem;
+    color: #666; /* Adjust the font color as needed */
+}
+
+.about .container .col .descrip ul li {
+    margin-bottom: 10px;
+    list-style: disc;
+    text-align: right;
+    direction: rtl;
+}
+
+.about .container .col .descrip ul li a {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .about .container .col .descrip h1 {
+        font-size: 2rem;
+    }
+
+    .about .container .col .descrip ul {
+        font-size: 1rem;
+    }
+    .about .container .col {
+        flex-basis: 100%;
+    }
+    .about .container .col .descrip span{
+        margin-inline: 10px;
+    }
+    .about .container .col .descrip span {
+        position: relative;
+        top:5px;
+    }
+}
+
+
+
+.about .container .col iframe{
+    width: 100%;
+    height: 400px;
+}
+
+footer{
+    background-image:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url(../sources/images/footer.webp);
+    background-position: center;
+    background-size: cover;
+    margin-top: 200px;
+}
+footer .col{
+    flex-basis: calc(95% / 3);
+    padding: 20px;
+    direction: rtl;
+}
+footer .col .logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    justify-content: center;
+}
+
+footer .col:first-of-type p{
+    padding: 20px;
+}
+footer .nav-list{
+    flex-direction: column;
+}
+
+footer .col h2:last-of-type {
+    font-size: 2rem;
+}
+footer .social-links{
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width:767px){
+    footer .col{
+        flex-basis: 100%;
+    }
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left:0;
+    background-image: linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75));
+    width: 100vw;
+    height: 0vh;
+    transition: .5s;
+    opacity: 0;
+}
+.modal.active{
+    height: 100vh;
+    opacity: 1;
+}
+.modal .icon{
+    width: fit-content;
+    padding: 10px 20px;
+}
+
+.modal .image-holder{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .image-holder img{
+    width: 80%;
+    height: 80%;
+}
+@media (max-width:767px){
+    .modal .image-holder img{
+        height: 40%;
+    }
+}
+
+
+
+.main-content{
+    margin-top: 50px;
+}
+#experience-counter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    gap: 10px;
+}
+#experience-counter p{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    text-transform: uppercase;
+    gap: 10px;
+    font-weight: bold;
+}
+#experience-counter p span{
+    font-size: 3rem;
+    font-weight: normal;
+}
+@media (max-width:767px){
+
+    #experience-counter{
+        width: 100%;
+    }
+    .main-content .head h1{
+        font-size: 1.3rem;
+    }
+    #experience-counter .spec{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2rem;
+    }
+    #experience-counter .spec span{
+        font-size: 3rem;
+    }
+    #experience-counter p span{
+        font-size: 1.5rem;
+    }
+}
