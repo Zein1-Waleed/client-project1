@@ -24,7 +24,8 @@ html{
 }
 
 .container{
-    padding: 1% 5%;
+    width: 90%;
+    margin-inline: auto;
 }
 a{
     text-decoration: none;
@@ -114,7 +115,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 
 nav .logo img {
@@ -268,7 +269,7 @@ header .main-btn img{
     }
 }
 .services .container{
-    padding: 10% 5%;
+    padding: 10% 0;
 }
 
 .head{
@@ -282,11 +283,14 @@ header .main-btn img{
     padding-top: 1%;
 }
 .services .container .grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap:20px;
 }
 .services .container .grid .col{
+    flex-basis: calc(95% / 3);
     height: 250px;
     background-position:center;
     background-size: cover;
