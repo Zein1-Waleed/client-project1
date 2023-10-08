@@ -298,6 +298,16 @@ header .main-btn img{
     padding: 10px;
     position: relative;
 }
+@media(max-width:767px){
+    .services .container .grid .col{
+        flex-basis: 100%;
+    }
+}
+@media (min-width:768px),(max-width:968px){
+    .services .container .grid .col{
+        flex-basis: calc(95% / 2)
+    }
+}
 .services .container .grid .col .descrip{
     width: 100%;
     position: absolute;
